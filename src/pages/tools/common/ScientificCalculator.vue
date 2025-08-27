@@ -321,23 +321,122 @@ const clearHistory = () => {
 
 <style scoped>
 .calc-btn-number {
-  @apply bg-white dark:bg-slate-700 hover:bg-gray-50 dark:hover:bg-slate-600 text-gray-800 dark:text-gray-200 font-semibold py-4 px-4 rounded-xl shadow-md transition-all duration-200 active:scale-95 min-h-[3rem];
+  background-color: white;
+  color: rgb(31 41 55);
+  font-weight: 600;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 3rem;
+}
+
+.calc-btn-number:hover {
+  background-color: rgb(249 250 251);
+  transform: scale(0.95);
+}
+
+.calc-btn-number:active {
+  transform: scale(0.95);
+}
+
+@media (prefers-color-scheme: dark) {
+  .calc-btn-number {
+    background-color: rgb(51 65 85);
+    color: rgb(229 231 235);
+  }
+
+  .calc-btn-number:hover {
+    background-color: rgb(71 85 105);
+  }
 }
 
 .calc-btn-operator {
-  @apply bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-semibold py-4 px-4 rounded-xl shadow-md transition-all duration-200 active:scale-95 min-h-[3rem];
+  background: linear-gradient(to right, rgb(59 130 246), rgb(79 70 229));
+  color: white;
+  font-weight: 600;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 3rem;
+}
+
+.calc-btn-operator:hover {
+  background: linear-gradient(to right, rgb(37 99 235), rgb(67 56 202));
+}
+
+.calc-btn-operator:active {
+  transform: scale(0.95);
 }
 
 .calc-btn-function {
-  @apply bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold py-4 px-4 rounded-xl shadow-md transition-all duration-200 active:scale-95 min-h-[3rem] text-sm;
+  background: linear-gradient(to right, rgb(168 85 247), rgb(236 72 153));
+  color: white;
+  font-weight: 600;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 3rem;
+  font-size: 0.875rem;
+}
+
+.calc-btn-function:hover {
+  background: linear-gradient(to right, rgb(147 51 234), rgb(219 39 119));
+}
+
+.calc-btn-function:active {
+  transform: scale(0.95);
 }
 
 .calc-btn-secondary {
-  @apply bg-gray-200 dark:bg-slate-600 hover:bg-gray-300 dark:hover:bg-slate-500 text-gray-700 dark:text-gray-200 font-semibold py-4 px-4 rounded-xl shadow-md transition-all duration-200 active:scale-95 min-h-[3rem];
+  background-color: rgb(229 231 235);
+  color: rgb(55 65 81);
+  font-weight: 600;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 3rem;
+}
+
+.calc-btn-secondary:hover {
+  background-color: rgb(209 213 219);
+}
+
+.calc-btn-secondary:active {
+  transform: scale(0.95);
+}
+
+@media (prefers-color-scheme: dark) {
+  .calc-btn-secondary {
+    background-color: rgb(71 85 105);
+    color: rgb(229 231 235);
+  }
+
+  .calc-btn-secondary:hover {
+    background-color: rgb(100 116 139);
+  }
 }
 
 .calc-btn-equals {
-  @apply bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold py-4 px-4 rounded-xl shadow-md transition-all duration-200 active:scale-95 min-h-[3rem];
+  background: linear-gradient(to right, rgb(34 197 94), rgb(5 150 105));
+  color: white;
+  font-weight: 700;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 3rem;
+}
+
+.calc-btn-equals:hover {
+  background: linear-gradient(to right, rgb(22 163 74), rgb(4 120 87));
+}
+
+.calc-btn-equals:active {
+  transform: scale(0.95);
 }
 
 @media (max-width: 640px) {
@@ -346,7 +445,9 @@ const clearHistory = () => {
   .calc-btn-function,
   .calc-btn-secondary,
   .calc-btn-equals {
-    @apply py-3 px-2 text-sm min-h-[2.5rem];
+    padding: 0.75rem 0.5rem;
+    font-size: 0.875rem;
+    min-height: 2.5rem;
   }
 }
 </style>
