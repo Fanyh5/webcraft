@@ -26,6 +26,11 @@ const routes = [
     path: '/tools/image/compressor',
     name: 'ImageCompressor',
     component: () => import('../pages/tools/image/ImageCompressor.vue')
+  },
+  {
+    path: '/tools/text/comparison',
+    name: 'TextComparison',
+    component: () => import('../pages/tools/text/TextComparison.vue')
   }
 ]
 

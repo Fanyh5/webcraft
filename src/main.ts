@@ -2,6 +2,9 @@ import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
 
+// Import diff2html styles
+import 'diff2html/bundles/css/diff2html.min.css'
+
 // 导入路由
 import router from './router'
 

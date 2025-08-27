@@ -52,6 +52,16 @@
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://quixotic.eu.cc/tools/video/m3u8-player" />
     <xhtml:link rel="alternate" hreflang="en" href="https://quixotic.eu.cc/en/tools/video/m3u8-player" />
   </url>
+
+  <!-- 文本对比工具 -->
+  <url>
+    <loc>https://quixotic.eu.cc/tools/text/comparison</loc>
+    <lastmod>2024-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://quixotic.eu.cc/tools/text/comparison" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://quixotic.eu.cc/en/tools/text/comparison" />
+  </url>
   
   <!-- 工具分类页面 -->
   <url>

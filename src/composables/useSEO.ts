@@ -1,4 +1,5 @@
 import { useHead } from '@unhead/vue'
+import { nextTick } from 'vue'
 
 interface SEOOptions {
   title?: string
@@ -39,7 +40,10 @@ export function useSEO(options: SEOOptions = {}) {
 
   const fullTitle = title.includes('WebCraft') ? title : `${title} | WebCraft - 在线工具集合`
 
-  useHead({
+  // 延迟调用 useHead 以确保上下文可用
+  nextTick(() => {
+    try {
+      useHead({
     title: fullTitle,
     meta: [
       // 基础 SEO
@@ -110,6 +114,10 @@ export function useSEO(options: SEOOptions = {}) {
         })
       }
     ]
+    })
+    } catch (error) {
+      console.warn('SEO head injection failed:', error)
+    }
   })
 
   return {
@@ -158,7 +166,8 @@ function getBreadcrumbName(segment: string): string {
     'calculator': '科学计算器',
     'qr-generator': '二维码工具',
     'compressor': '图片压缩',
-    'm3u8-player': 'M3U8播放器'
+    'm3u8-player': 'M3U8播放器',
+    'comparison': '文本对比'
   }
   
   return nameMap[segment] || segment.charAt(0).toUpperCase() + segment.slice(1)
@@ -197,5 +206,13 @@ export const toolSEOConfigs = {
     url: 'https://quixotic.eu.cc/tools/video/m3u8-player',
     section: '视频工具',
     tags: ['视频播放', 'M3U8', 'HLS', '直播', '在线工具']
+  },
+  textComparison: {
+    title: '文本对比工具 - 在线文本差异比较',
+    description: '专业的在线文本对比工具，支持分屏和统一视图模式，高亮显示文本差异，提供详细的变更统计。免费使用，支持大文本对比。',
+    keywords: '文本对比,文本比较,差异比较,文本差异,代码对比,在线对比工具,文本工具,diff工具',
+    url: 'https://quixotic.eu.cc/tools/text/comparison',
+    section: '文本工具',
+    tags: ['文本对比', '差异比较', '文本工具', '在线工具']
   }
 }
