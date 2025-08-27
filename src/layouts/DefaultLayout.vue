@@ -69,6 +69,9 @@ const sideMenuOptions = computed(() => {
 })
 
 function handleTopSelect(key: string | number) {
+  if (key === 'about') {
+    window.location.href = '/about'
+  }
   activeTopKey.value = key as NavKey
   // 切换一级导航时，重置对应侧栏的默认项
   const first = sideMenuOptions.value[0]
