@@ -7,10 +7,25 @@ const routes = [
     component: DefaultLayout,
     children: []
   },
+    {
+    path: '/tools/common/scientific-calculator',
+    name: 'ScientificCalculator',
+    component: () => import('../pages/tools/common/ScientificCalculator.vue')
+  },
+    {
+    path: '/tools/common/qr-generator',
+    name: 'QRGenerator',
+    component: () => import('../pages/tools/common/QRGenerator.vue')
+  },
   {
     path: '/tools/video/m3u8-player',
     name: 'M3u8Player',
     component: () => import('../pages/tools/video/M3u8OnlinePlay.vue')
+  },
+  {
+    path: '/tools/image/compressor',
+    name: 'ImageCompressor',
+    component: () => import('../pages/tools/image/ImageCompressor.vue')
   }
 ]
 
