@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, ref, onMounted, onUnmounted } from 'vue'
-import { NLayout, NLayoutHeader, NLayoutSider, NLayoutContent, NMenu, NInput, NButton, NBadge, NAvatar } from 'naive-ui'
+import { NLayout, NLayoutHeader, NLayoutSider, NLayoutContent, NMenu, NInput, NButton } from 'naive-ui'
 
 type NavKey = 'widgets' | 'games' | 'trending'
 
@@ -36,7 +36,7 @@ onUnmounted(() => {
 
 const topMenuOptions = [
   { label: '小工具', key: 'widgets' , disabled: false},
-  { label: '小游戏', key: 'games' , disabled: false},
+  { label: '小游戏', key: 'games' , disabled: true},
   { label: '今日热点', key: 'trending', disabled: true },
 ] as const
 
@@ -105,7 +105,7 @@ function closeMobileMenu() {
 <template>
   <n-layout class="h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
     <!-- Enhanced Responsive Header -->
-    <n-layout-header class="relative z-50">
+    <n-layout-header class="relative z-50 sm:px-4 md:px-12 lg:px-18">
       <div class="absolute inset-0 bg-white/80 dark:bg-slate-800/80 backdrop-blur-xl border-b border-white/20 shadow-lg"></div>
       <div class="relative flex items-center h-14 sm:h-16 px-3 sm:px-4 lg:px-6 gap-2 sm:gap-4">
 
@@ -170,38 +170,6 @@ function closeMobileMenu() {
             </div>
           </div>
 
-          <!-- Mobile/Tablet Search Button -->
-          <n-button quaternary circle :size="isMobile ? 'small' : 'medium'" class="xl:hidden">
-            <template #icon>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </template>
-          </n-button>
-
-          <!-- Notifications -->
-          <div class="relative hidden sm:block">
-            <n-badge dot type="success">
-              <n-button quaternary circle :size="isMobile ? 'small' : 'medium'" class="notification-btn">
-                <template #icon>
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-5 5v-5zM10.07 2.82l3.12 3.12c.944.944.944 2.475 0 3.419L8.5 14.04a1 1 0 01-.707.293H5v-2.793a1 1 0 01.293-.707l4.69-4.69c.944-.944 2.475-.944 3.419 0z" />
-                  </svg>
-                </template>
-              </n-button>
-            </n-badge>
-          </div>
-
-          <!-- User Avatar -->
-          <div class="flex items-center">
-            <n-avatar
-              :size="isMobile ? 'small' : 'medium'"
-              class="avatar-enhanced"
-              style="background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%)"
-            >
-              W
-            </n-avatar>
-          </div>
         </div>
       </div>
     </n-layout-header>
@@ -290,20 +258,6 @@ function closeMobileMenu() {
         class="sidebar-enhanced"
       >
         <div class="h-full bg-white/90 dark:bg-slate-800/90 backdrop-blur-xl border-r border-white/20 shadow-lg">
-          <!-- Sidebar Header -->
-          <div class="h-14 sm:h-16 flex items-center px-4 lg:px-6 border-b border-gray-200/30 dark:border-gray-700/30">
-            <div class="flex items-center gap-3">
-              <div class="w-8 h-8 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg flex items-center justify-center shadow-md">
-                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
-                </svg>
-              </div>
-              <div v-if="!(isTablet && isSidebarCollapsed)">
-                <div class="text-sm font-semibold text-gray-800 dark:text-gray-200">导航菜单</div>
-                <div class="text-xs text-gray-500 dark:text-gray-400">选择分类</div>
-              </div>
-            </div>
-          </div>
 
           <!-- Sidebar Content -->
           <div class="overflow-auto h-[calc(100vh-56px)] sm:h-[calc(100vh-64px)] p-3 lg:p-4">
@@ -567,8 +521,6 @@ function closeMobileMenu() {
 </template>
 
 <style scoped>
-/* 现代化响应式导航布局样式 */
-
 /* 主内容区域 */
 .main-content {
   background: transparent;
