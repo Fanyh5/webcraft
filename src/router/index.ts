@@ -7,6 +7,12 @@ const routes = [
     component: DefaultLayout,
     children: []
   },
+    // 关于我们
+    {
+    path: '/about',
+    name: 'AboutUs',
+    component: () => import('../pages/about/AboutUs.vue')
+  },
     {
     path: '/tools/common/scientific-calculator',
     name: 'ScientificCalculator',

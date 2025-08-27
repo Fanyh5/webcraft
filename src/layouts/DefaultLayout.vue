@@ -38,6 +38,7 @@ const topMenuOptions = [
   { label: '小工具', key: 'widgets' , disabled: false},
   { label: '小游戏', key: 'games' , disabled: true},
   { label: '今日热点', key: 'trending', disabled: true },
+  { label: '关于', key: 'about', disabled: false }
 ] as const
 
 const sideMenuOptions = computed(() => {
