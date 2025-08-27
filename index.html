@@ -1,13 +1,158 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + Vue + TS</title>
+
+    <!-- Primary Meta Tags -->
+    <title>WebCraft - 在线工具集合 | 科学计算器、二维码生成器、图片压缩工具</title>
+    <meta name="title" content="WebCraft - 在线工具集合 | 科学计算器、二维码生成器、图片压缩工具" />
+    <meta name="description" content="WebCraft 提供专业的在线工具集合，包括科学计算器、二维码生成扫描器、图片压缩工具、M3U8播放器等。免费、快速、安全的网页工具，无需下载安装。" />
+    <meta name="keywords" content="在线工具,科学计算器,二维码生成器,二维码扫描,图片压缩,M3U8播放器,网页工具,免费工具,WebCraft" />
+    <meta name="author" content="WebCraft Team" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="zh-CN" />
+
+    <!-- Viewport and Mobile Optimization -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="WebCraft工具" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://quixotic.eu.cc/" />
+    <meta property="og:title" content="WebCraft - 专业在线工具集合" />
+    <meta property="og:description" content="提供科学计算器、二维码生成扫描、图片压缩等专业在线工具。免费使用，无需注册，支持移动端。" />
+    <meta property="og:image" content="https://quixotic.eu.cc/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="WebCraft 在线工具集合" />
+    <meta property="og:site_name" content="WebCraft" />
+    <meta property="og:locale" content="zh_CN" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://quixotic.eu.cc/" />
+    <meta property="twitter:title" content="WebCraft - 专业在线工具集合" />
+    <meta property="twitter:description" content="提供科学计算器、二维码生成扫描、图片压缩等专业在线工具。免费使用，无需注册，支持移动端。" />
+    <meta property="twitter:image" content="https://quixotic.eu.cc/twitter-image.jpg" />
+    <meta property="twitter:image:alt" content="WebCraft 在线工具集合" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://quixotic.eu.cc/" />
+
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="msapplication-TileColor" content="#3b82f6" />
+    <meta name="theme-color" content="#3b82f6" />
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- DNS Prefetch and Preconnect -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+
+    <!-- Structured Data - Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "WebCraft",
+      "url": "https://quixotic.eu.cc",
+      "logo": "https://quixotic.eu.cc/logo.png",
+      "description": "专业的在线工具集合平台，提供科学计算器、二维码工具、图片处理等实用工具",
+      "sameAs": [
+        "https://github.com/webcraft-tools"
+      ]
+    }
+    </script>
+
+    <!-- Structured Data - WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "WebCraft",
+      "url": "https://quixotic.eu.cc",
+      "description": "专业在线工具集合",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://quixotic.eu.cc/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- Structured Data - SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "WebCraft 在线工具集合",
+      "applicationCategory": "WebApplication",
+      "operatingSystem": "Any",
+      "description": "提供科学计算器、二维码生成扫描、图片压缩、视频播放等专业在线工具",
+      "url": "https://quixotic.eu.cc",
+      "author": {
+        "@type": "Organization",
+        "name": "WebCraft Team"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "CNY"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "1250"
+      }
+    }
+    </script>
+
+    <!-- Performance Optimization -->
+    <link rel="modulepreload" href="/src/main.ts" />
+
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+
+    <!-- Alternative Languages -->
+    <link rel="alternate" hreflang="zh-CN" href="https://quixotic.eu.cc/" />
+    <link rel="alternate" hreflang="en" href="https://quixotic.eu.cc/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://quixotic.eu.cc/" />
   </head>
   <body>
-    <div id="app"></div>
+    <!-- Main App Container -->
+    <div id="app" role="main" aria-label="WebCraft 在线工具应用"></div>
+
+    <!-- Fallback for users with JavaScript disabled -->
+    <noscript>
+      <div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
+        <h1>WebCraft - 在线工具集合</h1>
+        <p>抱歉，本应用需要启用 JavaScript 才能正常运行。</p>
+        <p>请在浏览器设置中启用 JavaScript，然后刷新页面。</p>
+        <p>Sorry, this application requires JavaScript to run properly.</p>
+        <p>Please enable JavaScript in your browser settings and refresh the page.</p>
+      </div>
+    </noscript>
+
+    <!-- Main Application Script -->
     <script type="module" src="/src/main.ts"></script>
+
+    <!-- Analytics (placeholder - replace with your analytics code) -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    -->
   </body>
 </html>

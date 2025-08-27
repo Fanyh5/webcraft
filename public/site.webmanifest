@@ -1,0 +1,44 @@
+{
+  "name": "WebCraft - 在线工具集合",
+  "short_name": "WebCraft",
+  "description": "专业的在线工具集合，包括科学计算器、二维码生成扫描、图片压缩等实用工具",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "zh-CN",
+  "dir": "ltr",
+  "categories": ["productivity", "utilities", "tools"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "科学计算器",
+      "short_name": "计算器",
+      "description": "打开科学计算器工具",
+      "url": "/tools/common/calculator"
+    },
+    {
+      "name": "二维码工具",
+      "short_name": "二维码",
+      "description": "生成和扫描二维码",
+      "url": "/tools/common/qr-generator"
+    },
+    {
+      "name": "图片压缩",
+      "short_name": "压缩",
+      "description": "压缩图片文件大小",
+      "url": "/tools/image/compressor"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

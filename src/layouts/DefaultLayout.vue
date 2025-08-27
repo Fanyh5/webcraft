@@ -43,15 +43,10 @@ const topMenuOptions = [
 const sideMenuOptions = computed(() => {
   if (activeTopKey.value === 'widgets') {
     return [
-      { type: 'group', label: '精选', key: 'grp-w1', children: [
-        { label: '常用工具', key: 'widgets-home' },
-        { label: '图片工具', key: 'widgets-image' },
-        { label: '视频工具', key: 'widgets-video' },
-      ]},
-      { type: 'group', label: '处理', key: 'grp-w2', children: [
-        { label: '文本处理', key: 'widgets-text' },
-        { label: '开发者', key: 'widgets-dev' },
-      ]},
+      { label: '常用工具', key: 'widgets-home' },
+      { label: '图片工具', key: 'widgets-image' },
+      { label: '视频工具', key: 'widgets-video' },
+      { label: '文本工具', key: 'widgets-text' },
     ] as any
   }
   if (activeTopKey.value === 'games') {
@@ -309,38 +304,6 @@ function closeMobileMenu() {
                       </div>
                     </div>
                   </div>
-
-                  <div class="tool-card group">
-                    <div class="tool-card-icon bg-gradient-to-r from-green-500 to-emerald-600">
-                      <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
-                      </svg>
-                    </div>
-                    <div class="tool-card-content">
-                      <h3 class="tool-card-title">视频格式转换</h3>
-                      <p class="tool-card-description">支持多种视频格式之间的高质量转换</p>
-                      <div class="tool-card-tags">
-                        <span class="tool-tag">转换</span>
-                        <span class="tool-tag">多格式</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="tool-card group">
-                    <div class="tool-card-icon bg-gradient-to-r from-orange-500 to-red-500">
-                      <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                      </svg>
-                    </div>
-                    <div class="tool-card-content">
-                      <h3 class="tool-card-title">视频压缩</h3>
-                      <p class="tool-card-description">智能压缩算法，在保持质量的同时减小文件体积</p>
-                      <div class="tool-card-tags">
-                        <span class="tool-tag">压缩</span>
-                        <span class="tool-tag">优化</span>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </template>
@@ -373,22 +336,6 @@ function closeMobileMenu() {
                       <div class="tool-card-tags">
                         <span class="tool-tag">无损</span>
                         <span class="tool-tag">压缩</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="tool-card group">
-                    <div class="tool-card-icon bg-gradient-to-r from-emerald-500 to-teal-500">
-                      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4-4m0 0L8 8m4-4v12" />
-                      </svg>
-                    </div>
-                    <div class="tool-card-content">
-                      <h3 class="tool-card-title">格式转换</h3>
-                      <p class="tool-card-description">支持 JPG、PNG、WebP 等多种格式互转</p>
-                      <div class="tool-card-tags">
-                        <span class="tool-tag">多格式</span>
-                        <span class="tool-tag">转换</span>
                       </div>
                     </div>
                   </div>
@@ -425,22 +372,6 @@ function closeMobileMenu() {
                       <div class="tool-card-tags">
                         <span class="tool-tag">对比</span>
                         <span class="tool-tag">差异</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="tool-card group">
-                    <div class="tool-card-icon bg-gradient-to-r from-amber-500 to-orange-500">
-                      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                      </svg>
-                    </div>
-                    <div class="tool-card-content">
-                      <h3 class="tool-card-title">JSON 格式化</h3>
-                      <p class="tool-card-description">美化和验证 JSON 数据，支持语法高亮</p>
-                      <div class="tool-card-tags">
-                        <span class="tool-tag">JSON</span>
-                        <span class="tool-tag">格式化</span>
                       </div>
                     </div>
                   </div>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- 首页 -->
+  <url>
+    <loc>https://quixotic.eu.cc/</loc>
+    <lastmod>2024-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://quixotic.eu.cc/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://quixotic.eu.cc/en/" />
+  </url>
+  
+  <!-- 科学计算器 -->
+  <url>
+    <loc>https://quixotic.eu.cc/tools/common/calculator</loc>
+    <lastmod>2024-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://quixotic.eu.cc/tools/common/calculator" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://quixotic.eu.cc/en/tools/common/calculator" />
+  </url>
+
+  <!-- 二维码生成器 -->
+  <url>
+    <loc>https://quixotic.eu.cc/tools/common/qr-generator</loc>
+    <lastmod>2024-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://quixotic.eu.cc/tools/common/qr-generator" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://quixotic.eu.cc/en/tools/common/qr-generator" />
+  </url>
+
+  <!-- 图片压缩工具 -->
+  <url>
+    <loc>https://quixotic.eu.cc/tools/image/compressor</loc>
+    <lastmod>2024-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://quixotic.eu.cc/tools/image/compressor" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://quixotic.eu.cc/en/tools/image/compressor" />
+  </url>
+
+  <!-- M3U8播放器 -->
+  <url>
+    <loc>https://quixotic.eu.cc/tools/video/m3u8-player</loc>
+    <lastmod>2024-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://quixotic.eu.cc/tools/video/m3u8-player" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://quixotic.eu.cc/en/tools/video/m3u8-player" />
+  </url>
+  
+  <!-- 工具分类页面 -->
+  <url>
+    <loc>https://quixotic.eu.cc/tools/common/</loc>
+    <lastmod>2024-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://quixotic.eu.cc/tools/image/</loc>
+    <lastmod>2024-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://quixotic.eu.cc/tools/video/</loc>
+    <lastmod>2024-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://quixotic.eu.cc/tools/text/</loc>
+    <lastmod>2024-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+</urlset>

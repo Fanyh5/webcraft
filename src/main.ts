@@ -5,9 +5,16 @@ import App from './App.vue'
 // 导入路由
 import router from './router'
 
+// 导入 SEO 头部管理
+import { createUnhead } from '@unhead/vue'
+
 const app = createApp(App)
 
-// 使用路由
+// 创建头部管理实例
+const head = createUnhead()
+
+// 使用路由和头部管理
 app.use(router)
+app.use(head as any)
 
 app.mount('#app')
